@@ -31,3 +31,4 @@ social-auth-app-django
 python-decouple==3.3
 Pillow==8.0.1
 cloudinary
+sendgrid
