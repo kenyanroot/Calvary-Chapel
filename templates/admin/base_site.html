@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% load i18n static %}
+
+{% block title %}{{ title }} | {% trans "Calvary Cghapel Admin" %}{% endblock %}
+{% block extrastyle %}
+     <link rel="stylesheet" type="text/css" href="{% static 'css/admin_color.css' %}"/>
+{% endblock %}
+
+{% block branding %}
+
+ <h1 id="head">
+        <img src="{% static 'calvarylogo.png' %}" width="75px" height="75px">
+        Calvary Chapel Admin
+
+    </h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

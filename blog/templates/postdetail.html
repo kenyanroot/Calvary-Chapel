@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<main class="container">
+
+<!--  <div class="starter-template text-center py-5 px-3">-->
+<!--    <h1>Bootstrap starter template</h1>-->
+<!--    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>-->
+<!--  </div>-->
+
+
+    <div class="row mb-2">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="pb-4 mb-4 font-italic border-bottom">
+            From the Firehose
+          </h3>
+
+          <article class="blog-post">
+            <h2 class="blog-post-title">{{ object.title }}</h2>
+            <p class="blog-post-meta">{{ object.posted_date }} by {{ object.posted_by }} </p>
+            <p> {{ object.article |safe }}</p>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+<!-- {% for feature in featuredlist %}-->
+<!--{{ feature.posted_date }}-->
+<!--{% endfor %}-->
+
+
+</main><!-- /.container -->
+{% endblock %}

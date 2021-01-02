@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main class="container">
+
+  <div class="starter-template text-center py-5 px-3">
+
+  {% if results %}
+      <h4>{{ totalresults }} Results found </h4>
+    {% for result in results %}
+      <a href="{% url 'post' result.pk  %}">{{ result }}</a><br><br><br>
+
+      {% endfor %}
+  {% else %}
+  <h3>No results matching the query were found</h3>
+  {% endif %}
+  </div>
+<div id="map"></div>
+</main><!-- /.container -->
+{% endblock %}

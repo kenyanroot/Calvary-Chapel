@@ -1,0 +1,1 @@
+web: gunicorn calvaryChapel.wsgi --log-file -
