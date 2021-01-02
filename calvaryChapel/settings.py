@@ -188,5 +188,6 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'authentication/static'),
 
     ]
-LOGOUT_REDIRECT_URL = '/'
 
+LOGOUT_REDIRECT_URL = '/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
