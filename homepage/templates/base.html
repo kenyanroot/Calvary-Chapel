@@ -44,7 +44,7 @@
     <link href="{% static 'starter-template.css' %}" rel="stylesheet">
   </head>
   <body>
- <nav class="navbar navbar-expand-md navbar-fixed-top navbar navbar-light fixed-top " style=" ">
+ <nav class="navbar navbar-expand-md navbar-fixed-top navbar navbar-light fixed-top " style="background-color:#53C0F0; ">
   <div class="container-fluid">
     <a style="color:white;" class="navbar-brand" href="#">Calvary Chapel Githurai</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -131,6 +131,35 @@
           });
         });
       </script>
+
+
+  <script>
+         const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function() {
+          if (this.matchMedia("(min-width: 768px)").matches) {
+            $dropdown.hover(
+              function() {
+                const $this = $(this);
+                $this.addClass(showClass);
+                $this.find($dropdownToggle).attr("aria-expanded", "true");
+                $this.find($dropdownMenu).addClass(showClass);
+              },
+              function() {
+                const $this = $(this);
+                $this.removeClass(showClass);
+                $this.find($dropdownToggle).attr("aria-expanded", "false");
+                $this.find($dropdownMenu).removeClass(showClass);
+              }
+            );
+          } else {
+            $dropdown.off("mouseenter mouseleave");
+          }
+        });
+                 </script>
 
 
   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>

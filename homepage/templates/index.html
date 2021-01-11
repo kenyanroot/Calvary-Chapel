@@ -44,7 +44,7 @@
     <!-- Custom styles for this template -->
 
   </head>
-  <body>
+  <body style="background-color:#f5f7f8;">
  <nav class="navbar navbar-expand-md navbar-fixed-top navbar navbar-light fixed-top "style="z-index:100;">
   <div class="container-fluid">
     <a style="color:white;" class="navbar-brand" href="#">Calvary Chapel Githurai</a>
@@ -170,7 +170,7 @@
             <p><a class="btn btn-secondary" style="background-color:#E08419; border:none;" href="#" role="button">Read more &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-                          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                          <img  src="{% static 'images/community.jpg' %}" class=" rounded-circle" style="width:140px; height:140px;" >
 
             <h2>Mission</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -206,38 +206,24 @@
          <h3>Blog Articles</h3>
 
          <div class="row mb-2">
+                {% for post in posts|slice:"-3:-1::-1" %}
             <div class="col-md-6">
+
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">World</strong>
-                        <h3 class="mb-0">Featured post</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
+                        <strong class="d-inline-block mb-2 text-primary">{{ post.category }}</strong>
+                        <h3 class="mb-0">{{ post.title }}</h3>
+                        <div class="mb-1 text-muted">{{ post.posted_date }}</div>
+                        <p class="card-text mb-auto">{{ post.short_description|truncatewords_html:3 |safe }}</p>
+                        <a href="{% url 'post' post.pk %}" class="stretched-link">Continue reading</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <img src ="{% static 'images/corona.jpg' %}" class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false">
 
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">Design</strong>
-                        <h3 class="mb-0">Post title</h3>
-                        <div class="mb-1 text-muted">Nov 11</div>
-                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-                    </div>
-                </div>
-            </div>
-         </div>
-
 
      </div>
 
@@ -245,20 +231,19 @@
       <hr class="featurette-divider">
 
 
-
-
         <hr class="featurette-divider">
-
+            {% for post in pastors_quote|slice:"::-1" %}
           <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">{{ pastors_quote.title }}</h2>
+            <p class="lead">{{ pastors_quote.pastors_quote.url }}</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <img src="{{ pastors_picture" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" >
 
           </div>
         </div>
+             {% endfor %}
 
         <hr class="featurette-divider">
 
@@ -385,6 +370,35 @@ $(function () {
           });
         });
 </script>
+
+
+             <script>
+         const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function() {
+          if (this.matchMedia("(min-width: 768px)").matches) {
+            $dropdown.hover(
+              function() {
+                const $this = $(this);
+                $this.addClass(showClass);
+                $this.find($dropdownToggle).attr("aria-expanded", "true");
+                $this.find($dropdownMenu).addClass(showClass);
+              },
+              function() {
+                const $this = $(this);
+                $this.removeClass(showClass);
+                $this.find($dropdownToggle).attr("aria-expanded", "false");
+                $this.find($dropdownMenu).removeClass(showClass);
+              }
+            );
+          } else {
+            $dropdown.off("mouseenter mouseleave");
+          }
+        });
+                 </script>
  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
   </body>
 </html>

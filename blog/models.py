@@ -5,6 +5,7 @@ from ckeditor.fields import RichTextField
 from  datetime import datetime
 from django.http import request
 # Create your models here.
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -35,7 +36,7 @@ class Blog(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post', args=(str(self.id)))
+        return reverse('post', args=(str(self.pk)))
 
     class Meta:
         verbose_name_plural = "Blog Posts"
@@ -63,9 +64,6 @@ class FeaturedPosts(models.Model):
         ordering = ['-posted_date']
 
     def get_absolute_url(self):
-        return reverse('post', args=(str(self.id)))
-
-
-
+        return reverse('post', args=(str(self.pk)))
 
 

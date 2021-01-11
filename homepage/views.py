@@ -1,9 +1,19 @@
 from django.shortcuts import render,HttpResponse
-
+from blog.models import Blog
+from  homepage.models import Grid,PastorsQuote
 # Create your views here.
 
 def index(request):
-    return render(request,'index.html')
+    posts=Blog.objects.all()
+    grid=Grid.objects.all()
+    pastors_quote=PastorsQuote.objects.all()
+    context={
+        'posts':posts,
+        'grid':grid,
+        'pastors_quote':pastors_quote,
+    }
+
+    return render(request,'index.html',context)
 
 
 def youth(request):

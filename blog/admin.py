@@ -10,6 +10,7 @@ from .models import Blog,Category,FeaturedPosts
 
 
 
+
 class Categories(admin.ModelAdmin):
 
     list_display = ('category',)
