@@ -62,6 +62,7 @@ class FeaturedPosts(models.Model):
     class Meta:
         verbose_name_plural = "Featured Posts"
         ordering = ['-posted_date']
+        get_latest_by='posted_date'
 
     def get_absolute_url(self):
         return reverse('post', args=(str(self.pk)))

@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import index,youth,location,about,calvaryLearningCenter
+from .views import index,youth,location,about,calvaryLearningCenter,give,media
 
 urlpatterns = [
     path('',index,name='index'),
@@ -9,6 +9,8 @@ urlpatterns = [
     path('location', location, name='location'),
     path('calvaryLearningCenter', calvaryLearningCenter, name='clc'),
     path('youth', youth, name='youth'),
+    path('give',give,name='give'),
+    path('media',media,name='media'),
 
 
 ]

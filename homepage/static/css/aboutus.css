@@ -1,0 +1,51 @@
+.aboutccg{
+    background-image: url('https://scontent.fnbo10-1.fna.fbcdn.net/v/t1.0-9/136475335_3958243597542607_7132066106555242881_o.jpg?_nc_cat=102&ccb=2&_nc_sid=730e14&_nc_eui2=AeF0NWwEkQjza3txNYpvBxww1bt5hue6vyLVu3mG57q_IvV02sPTU3aLwZAG3fjyMCR-NhIYZygj0G_xVhJKvCj9&_nc_ohc=-1KscYoeb3oAX_hjpun&_nc_ht=scontent.fnbo10-1.fna&oh=e0ebcbd6fdc6370e6d85b7c51e65340b&oe=602D6909');
+    min-height: 100vh;
+    min-width: 100vw;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    
+}
+
+
+.imagefilter{
+    background-color:#2B65EC;
+    opacity: .4;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.aboutdiv{
+width: 100vw;
+height: 100vh;
+margin-top: 100px;
+
+}
+
+.leadership{
+    margin-top: 90px;
+   
+
+}
+
+.leadership h1{
+    margin-bottom: 40px;
+}
+
+.moredesc{
+
+    margin-top: 60px;
+    
+}
+
+.moredesc p{
+
+}

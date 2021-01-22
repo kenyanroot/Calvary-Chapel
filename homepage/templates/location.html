@@ -1,81 +1,92 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
-<main class="container">
-
-<div style="margin-top: 100px;" class="ratio ratio-16x9">
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.934741062253!2d36.9133097!3d-1.205846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3fccf24e3837%3A0x43ffeba4f197260d!2sCalvary%20Chapel%20Githurai!5e0!3m2!1sen!2ske!4v1608819739384!5m2!1sen!2ske"
-                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
-    </div>
-
-
-
-
-
-
+        <div class="container locationdiv ">
+            <div class="row">
+                <div class="col-6 container-fluid" >
+                    
+                    
+                    <div id="mapdiv" class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.934741062253!2d36.9133097!3d-1.205846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3fccf24e3837%3A0x43ffeba4f197260d!2sCalvary%20Chapel%20Githurai!5e0!3m2!1sen!2ske!4v1608819739384!5m2!1sen!2ske" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>   
+                    
+                    
+                </div>
 
 
 
+                <div class="col-6">
 
-<main class="container">
-  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Other Locations</h1>
-    <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
-  </div>
-
-  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">Tanzania</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">Esere</h1>
-      <p>
-         somecontent somecontentsomecontentsomecontentsomecontentv</p>
-        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Contact</button>
-      </div>
-    </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">Tanzania</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">Esere</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-primary">Contact</button>
-      </div>
-    </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">Tanzania</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">Esere</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
-      </div>
-    </div>
-    </div>
-  </div>
-
-
-</main>
-</main><!-- /.container -->
+                    <div class="row">
+                        <h1>Other Locations</h1>
+                        <div class="col-4">
+                            
+                          <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="places" onclick="chngplces()"   data-bs-toggle="list" href="#description" role="tab" aria-controls="home">Back to Githurai</a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list" onclick="chngplcesCcNairobi()" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Nairobi</a>
+                            <a class="list-group-item list-group-item-action" id="list-messages-list" onclick="chngplcesCcNairobi()" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Eldoret</a>
+                            <!-- <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Esere</a> -->
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="places">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis vero, quasi quidem obcaecati eius animi dignissimos error exercitationem accusantium quibusdam iure quis, quod fugiat voluptatem distinctio! Vel explicabo mollitia facilis!</div>
+                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem dicta pariatur adipisci quam? Harum sint eos placeat dicta esse praesentium totam distinctio iste eveniet, deserunt earum atque qui quas vitae.</div>
+                            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, amet minima, animi sed ea eaque corrupti laudantium possimus, temporibus consectetur quod dolorum. In, laboriosam minus veritatis perspiciatis animi quisquam ipsa?.</div>
+                            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad cumque sed omnis ab saepe natus voluptatum facilis praesentium debitis cum, error laboriosam, porro enim ipsam hic sapiente. Animi, reiciendis omnis?</div>
+                          </div>
+                        </div>
+                      </div>
 
 
 
+                    
+                </div>
+              </div>
+           
+
+        
+        <script>
+            // const places=Document.getElementById('places')
+            const description= document.getElementById('description');
+           
+
+            function chngplcesCcg() {
+            
+            var mapdiv= document.getElementById('mapdiv');
+            mapdiv.innerHTML='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6403942554916!2d36.68077891410172!3d-1.3922934361420949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f03ed10b30725%3A0x7b5d51cbf904bcd3!2sCalvary%20Chapel%20Ngong%20Hills!5e0!3m2!1sen!2ske!4v1611161545070!5m2!1sen!2ske" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+            window.console.log('it worked!');
+
+            }
+
+            function chngplcesCcNairobi() {
+            
+            var mapdiv= document.getElementById('mapdiv');
+            mapdiv.innerHTML='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.745415875911!2d36.71540631410124!3d-1.3287746360471813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b3ff6ae298d%3A0x4137a8afa5060e77!2sCalvary%20Chapel%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1611161650943!5m2!1sen!2ske" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+            window.console.log('it worked!');
+
+            }
+
+            function chngplcesCcEldoret() {
+            
+            var mapdiv= document.getElementById('mapdiv');
+            mapdiv.innerHTML='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6743289886526!2d35.266319114449054!3d0.4867775996448637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1780fe2f486b895f%3A0xd288ef02d331c029!2sCalvary%20Chapel%20Eldoret!5e0!3m2!1sen!2ske!4v1611161784903!5m2!1sen!2ske" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+            window.console.log('it worked!');
+
+            }
 
 
-  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-{% endblock %}
+            
+
+
+
+        </script>
+            </body>
+           
+       
+       
+            </html>
+
+            {% endblock %}

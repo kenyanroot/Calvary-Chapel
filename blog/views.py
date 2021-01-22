@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.views.generic import DetailView,ListView
 
 from .models import Blog, Category, FeaturedPosts
-
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -15,7 +15,8 @@ class BlogClass(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         category = Category.objects.all()
-        featuredmain = FeaturedPosts.objects.latest('title', 'short_description', 'category', 'article_thumbnail')
+        featuredmain=get_object_or_404(FeaturedPosts.objects.latest(),'title', 'short_description', 'category', 'article_thumbnail')
+        # featuredmain = FeaturedPosts.objects.latest('title', 'short_description', 'category', 'article_thumbnail')
         for featured in FeaturedPosts.objects.all():
             featuredlist.append(featured)
             print(featuredlist)

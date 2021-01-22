@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <div class="container-fluid giveform-container ">
+
+            <div class="containerform">
+
+                <!-- <form action="Viewclass" method="post">{% csrf_token %} -->
+                     <!-- {% if messages %}
+                    {% for message in messages %} -->
+                    <div class="messages">
+                        <!-- {{ message }} -->
+                    </div>
+                    <!-- {% endfor %}
+                    {% endif %} -->
+                        <div class="inputbox">
+
+                        <input class="firstname" type="text" name="firstname" placeholder="firstname (optional)" id="customx" >
+                            <!-- <span >First Name</span> -->
+
+                        </div>
+                        
+
+
+                        <div class="inputbox">
+
+                        <input class="phoneno1" type="text" placeholder="Phone Number" name="phone" required >
+                        
+
+                        </div>
+
+                        <p class="pa">Please enter your phone number in the following format : 2547********</p>
+
+                     
+
+
+                    <button class="submit" type="submit"><h2 class="submitb" >SUBMIT</h2></button>
+
+
+
+
+
+
+
+
+
+                </form>
+
+         </div>
+
+         <script>
+
+// var el = document.getElementById("customx");
+// if (el !== null && el.value === "")
+// {
+//     window.console.log('The element was found and the value is empty.')
+//   //The element was found and the value is empty.
+// }
+
+// else{
+//     window.console.log('The element was found to have a value.')
+// }
+
+         </script>
+        </div>
+
+
+
+
+        </body>
+        </html>
+
+        {% endblock %}

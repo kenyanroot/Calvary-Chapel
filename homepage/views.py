@@ -25,13 +25,14 @@ def location(request):
 
 
 def about(request):
-    return render(request,'about.html')
+    return render(request,'aboutus.html')
 
 
 def calvaryLearningCenter(request):
     return HttpResponse('coming soon!')
 
 
-# def index(request):
-#     return render(request,'index.html')
-#
+def give(request):
+    return render(request,'give.html')
+def media(request):
+    return render (request,'media.html')

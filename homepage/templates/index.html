@@ -1,404 +1,199 @@
-
+{% extends 'base.html' %}
 {% load static %}
-{% load static %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.79.0">
-    <title>Calvary Chapel Githurai</title>
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+{% block content %}
+        <div class="area  background">
+           
+            <div class="homediv">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
 
-
-
-    <!-- Bootstrap core CSS -->
-
-<link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
-      <link href="{% static 'navbar-top-fixed.css' %}" rel="stylesheet">
-
-       <link href="{% static 'index.css' %}" rel="stylesheet">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-
-    <!-- Custom styles for this template -->
-
-  </head>
-  <body style="background-color:#f5f7f8;">
- <nav class="navbar navbar-expand-md navbar-fixed-top navbar navbar-light fixed-top "style="z-index:100;">
-  <div class="container-fluid">
-    <a style="color:white;" class="navbar-brand" href="#">Calvary Chapel Githurai</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" style="color:white; z-index:100;" aria-current="page" href="{% url 'index' %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color:white;" href="{% url 'about' %}">About</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link " style="color:white;"href="{% url 'location' %}" tabindex="-1" >Location</a>
-        </li>
-
-          <li class="nav-item active">
-          <a class="nav-link" style="color:white;"aria-current="page" href="{% url 'youth' %}">Youth</a>
-       </li>
-
-            <li class="nav-item">
-          <a class="nav-link" style="color:white;"href="{% url 'blog' %}">Blog</a>
-         </li>
-
-
-            <div class="dropdown">
-  <a class="nav-link dropdown-toggle" href="#" style="color:white;" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-    Ministries
-  </a>
-
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li> <a class="dropdown-item" href="{% url 'youth' %}">Youth</a></li>
-      <li><a class="dropdown-item" href="#">kids</a></li>
-    <li><a class="dropdown-item" href="#">Men</a></li>
-      <li><a class="dropdown-item" href="#">Women</a></li>
-  </ul>
-</div>
-          <li class="nav-item">
-          <a style="color:white;" data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link" href="{% url 'clc' %}">Calvary Learning Center</a>
-        </li>
-
-
-
-      </ul>
-
-      <form action="{% url 'search' %}" method="post" class="d-flex">{% csrf_token %}
-        <a href="{% url 'signin' %}" style="color:white;" type="button" class="btn ">Sign In</a>
-        <a href="{% url 'signup' %}" style="color:white;" type="button" class="btn btn-info">Register</a>
-      </form>
-    </div>
-  </div>
-</nav>
-
-
-
-
-
-
-    <div class="bg">
-
-    <img class="img" src="{% static 'images/ccgcover.jpg' %}" alt="Five developers at work.">
-        <div class="textdiv">
-            <div class="try" style="">
-                <h3>Lorem ipsum dolor sit, amet consect</h3>
-
+              <h1 class="fs-1">welcome to Calvary <br>
+                
+                <p>Join us on Sundays From 9am to 1pm or you can..</p>
+                <button class="btn btn-primary join-us">Livestream</button>
+              </h1>
+           
             </div>
 
+        </div>
+        <div class="slideup container-fluid">
 
-</div>
+        <div class="container-lg "  class="row">
+            <div class="upcomingevents"><h1 class="text-center">Upcoming Events</h1></div>
+
+        
+        <div class="container ">
+            <div class="row">
+              <div class="col-sm eventscard">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">See more</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-sm eventscard">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">See more</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-sm eventscard">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">See more</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
 
 
-    </div>
 
+          <div class="container content ">
+            <div class="row">
+            <div class="ourcommunity col-sm container-fluid text-center">
 
+                <h1>Our Community</h1>
 
-    <div class="container-fluid slideup" >
-
-        <div class="wrapper container">
-            <h3 class="">Next service begins in</h3>
-            <div class=" btn timer btn-primary btn-sm">
-              <i class="fa fa-code fa-2x"></i>
-              <h2></h2>
-               <p id="days" class="count-text "></p>
+                
+            </div>
+            <div class="aboutus col-sm container-fluid  text-center">
+                <h1>Mission</h1>
             </div>
 
-
-            <div class="btn timer btn-primary btn-sm">
-              <i class="fa fa-lightbulb-o fa-2x"></i>
-              <h2></h2>
-               <p id="hours" class="count-text "></p>
-            </div>
-
-            <div class="btn timer btn-primary btn-sm end">
-              <i class="fa fa-bug fa-2x"></i>
-              <h2></h2>
-                <p id="minutes" class="count-text "></p>
-            </div>
-
-            <div class="btn timer btn-primary btn-sm end">
-              <i class="fa fa-bug fa-2x"></i>
-              <h2></h2>
-                <p id="seconds" class="count-text "></p>
-            </div>
         </div>
 
 
+        <hr>
 
-
-
-
-         <div  class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-            <h2>Our Community</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" style="background-color:#E08419; border:none;" href="#" role="button">Read more &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-                          <img  src="{% static 'images/community.jpg' %}" class=" rounded-circle" style="width:140px; height:140px;" >
-
-            <h2>Mission</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" style="background-color:#E08419; border:none;" href="#" role="button">Read more &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-            <h2>Participate with us</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" style="background-color:#E08419; border:none;" href="#" role="button">Read more &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-
-
-
-
-    <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Livestream <span class="text-muted">Our sunday service </span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
+        <div class=" video text-center">
+            <h1>Livestream our Sunday service</h1>
           <div class="ratio ratio-21x9">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCujD5YXzqO4-R2X8OohKgYA" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-         <h3>Blog Articles</h3>
-
-         <div class="row mb-2">
-                {% for post in posts|slice:"-3:-1::-1" %}
-            <div class="col-md-6">
-
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">{{ post.category }}</strong>
-                        <h3 class="mb-0">{{ post.title }}</h3>
-                        <div class="mb-1 text-muted">{{ post.posted_date }}</div>
-                        <p class="card-text mb-auto">{{ post.short_description|truncatewords_html:3 |safe }}</p>
-                        <a href="{% url 'post' post.pk %}" class="stretched-link">Continue reading</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img src ="{% static 'images/corona.jpg' %}" class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false">
-
-                    </div>
-                </div>
-                {% endfor %}
+              
+            <iframe src="https://www.youtube.com/embed/live_stream?channel=UCujD5YXzqO4-R2X8OohKgYA" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
 
-     </div>
 
 
-      <hr class="featurette-divider">
+          <div class=" container-fluid  text-center" >
+            <h1>Blog</h1>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm eventscard">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="..." alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="col-sm eventscard">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="..." alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            </div>
+              </div>
 
 
-        <hr class="featurette-divider">
-            {% for post in pastors_quote|slice:"::-1" %}
-          <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">{{ pastors_quote.title }}</h2>
-            <p class="lead">{{ pastors_quote.pastors_quote.url }}</p>
+
           </div>
-          <div class="col-md-5 order-md-1">
-            <img src="{{ pastors_picture" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" >
 
-          </div>
+          <hr>
+
+         
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="footer container-fluid">
+
+        <div class="subscribe container-lg">
+            <form>
+                
+            <button class="embtn" type="submit">SUBSCRIBE</button>
+            <input class="form-control" type="text">
+            
+        </form>
         </div>
-             {% endfor %}
+        
 
-        <hr class="featurette-divider">
+    <a  href="https://twitter.com/ndeda_anaclate" class="fab fa-twitter-square"></a>
+    <a href="https://www.instagram.com/anacorayz/" class="fab fa-instagram"></a>
+    <a href="https://www.facebook.com/anaclate.umudii" class="fab fa-facebook-square"></a>
+    <h1 class="callvary fs-1">Calvary Chapel Githurai</h1>
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Location <span class="text-muted"></span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-            </p><a href="{% url 'location' %}" style="background-color:#E08419; border:none;" class="btn bcolor btn-primary">Get Directions</a>
-          </div>
-          <div class="col-md-5">
-              <div class="ratio ratio-1x1">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.934741062253!2d36.9133097!3d-1.205846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3fccf24e3837%3A0x43ffeba4f197260d!2sCalvary%20Chapel%20Githurai!5e0!3m2!1sen!2ske!4v1608819739384!5m2!1sen!2ske" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-        </iframe>
-                  </div>
-                  </div>
-            </div>
+    
+    
+    <a href="tel:+254-738-3080-00" class="phoneno"><img class="phoneicon" src="icons/phone.svg" ></img> &nbsp;+254 738 3080 00</a>
 
-        <hr class="featurette-divider">
+    <a href="calvarylcgithurai@gmail.com" class="email"><img class='emailicon' src='icons/email.svg'></img> &nbsp;
+        calvarylcgithurai@gmail.com</a>
+    <h1 class="copyright fs-1">© 2021 CCG.All Rights Reserved</h1>
 
 
-
-    <!-- /END THE FEATURETTES -->
-
-<div class="header">
-  <h1>Our gallery</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
 </div>
 
-<!-- Photo Grid -->
-<div class="row">
-  <div class="column">
-     <img src="{% static 'images/baptism2.jpg' %}" style="width:100%">
-
-
-  </div>
-    <div class="container">
-  <div class="column">
-     <img src="{% static 'images/bg.jpg' %}" style="width:100%">
+    
 
 
 
-  </div>
-  <div class="column">
-    <img src="{% static 'images/baptism2.jpg' %}" style="width:40%">
+    </body>
 
-
-  </div>
-
-    </div>
-
-        <section id="photos"></section>
-
-  </div><!-- /.container -->
-
-  ...
-
-
-
-
-  </main>
-
-
- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Under Construction</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Comin soon!, Thank you for your patience
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("days").innerHTML = days + "d ";
-   document.getElementById("hours").innerHTML = hours + "h ";
-    document.getElementById("minutes").innerHTML = minutes + "m ";
-     document.getElementById("seconds").innerHTML = seconds + "s ";
-
-
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("days").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
-
-<script>
-$(function () {
-          $(document).scroll(function () {
-            var $nav = $(".navbar-fixed-top");
-            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-          });
-        });
-</script>
-
-
-             <script>
-         const $dropdown = $(".dropdown");
-        const $dropdownToggle = $(".dropdown-toggle");
-        const $dropdownMenu = $(".dropdown-menu");
-        const showClass = "show";
-
-        $(window).on("load resize", function() {
-          if (this.matchMedia("(min-width: 768px)").matches) {
-            $dropdown.hover(
-              function() {
-                const $this = $(this);
-                $this.addClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "true");
-                $this.find($dropdownMenu).addClass(showClass);
-              },
-              function() {
-                const $this = $(this);
-                $this.removeClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "false");
-                $this.find($dropdownMenu).removeClass(showClass);
-              }
-            );
-          } else {
-            $dropdown.off("mouseenter mouseleave");
-          }
-        });
-                 </script>
- <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-  </body>
 </html>
+{% endblock %}
