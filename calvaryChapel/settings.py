@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'calvaryChapel.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
+DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': 'ccg',
@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'calvaryChapel.wsgi.application'
 #         'HOST':'localhost',
 
 #    }
-# }
+ }
 #
 # import dj_database_url
 #
